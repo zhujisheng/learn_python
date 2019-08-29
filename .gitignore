@@ -2,5 +2,9 @@
 *.ve
 *.ppt
 *.pptx
+*.mp3
+*.mp4
 temp/
+video/
 __pycache__/
+
