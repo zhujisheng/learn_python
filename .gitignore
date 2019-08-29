@@ -1,4 +1,6 @@
 *.txt
 *.ve
+*.ppt
+*.pptx
 temp/
 __pycache__/
