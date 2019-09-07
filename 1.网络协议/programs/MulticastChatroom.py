@@ -22,7 +22,7 @@ def listen_print():
 
     while True:
         # 接收数据:
-        msg, addr = s.recvfrom(1024)
+        msg, addr = recv_sock.recvfrom(1024)
         print('(%s:%s): '%addr, msg.decode())
 
 # 接收键盘输入，发送到组播地址
