@@ -22,8 +22,6 @@ server.listen()
 # message_queues[socket1]=队列A，意味着要向socket1发送队列A中的每条信息
 message_queues = {}
 
-timeout = 1
-
 READ_ONLY = select.EPOLLIN | select.POLLPRI | select.POLLHUP | select.POLLERR
 READ_WRITE = READ_ONLY|select.POLLOUT
 poller = select.poll()
@@ -32,7 +30,7 @@ poller.register( server, READ_ONLY )
 fd_to_socket = {server.fileno():server}
 
 while(True):
-    events = poller.poll(timeout)
+    events = poller.poll()
     for fd, flag in events:
         available_sock = fd_to_socket[fd]
         if flag & (select.POLLIN | select.POLLPRI):

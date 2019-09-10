@@ -12,7 +12,7 @@ from selectors import DefaultSelector, EVENT_READ, EVENT_WRITE
 
 sel = DefaultSelector()
 
-def accept(available_sock, ev):
+def listen_accept(available_sock, ev):
     conn, addr = available_sock.accept()
     print( "新的连接：(%s:%s)"%addr )
     sel.register(conn, EVENT_READ, data=recv_send)
@@ -51,7 +51,7 @@ server_address = ( '0.0.0.0', 9999 )
 server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 server.bind(server_address)
 server.listen()
-sel.register(server, EVENT_READ, data=accept)
+sel.register(server, EVENT_READ, data=listen_accept)
 
 # message_queues[socket1]=队列A，意味着要向socket1发送队列A中的每条信息
 message_queues = {}

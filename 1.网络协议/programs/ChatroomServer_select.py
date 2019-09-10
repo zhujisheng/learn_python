@@ -26,12 +26,8 @@ outputs = []
 # message_queues[socket1]=队列A，意味着要向socket1发送队列A中的每条信息
 message_queues = {}
 
-timeout = 1
-
 while(True):
-    readable , writable , exceptional = select.select(inputs, outputs, inputs, timeout)
-    if not (readable or writable or exceptional) :
-        continue
+    readable , writable , exceptional = select.select(inputs, outputs, inputs)
 
     for available_sock in readable :
         if available_sock is server:
