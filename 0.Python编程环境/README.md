@@ -6,4 +6,3 @@
 - [最基础的IDE——IDLE](3.最基础的IDE——IDLE.md)
 - [浏览器中的Python——Jupyter](4.浏览器中的Python——Jupyter.md)
 - [单片机上的Python——MicroPython](5.单片机上的Python——MicroPython.md)
-- [在Sublime中编写Python程序](6.在Sublime中编写Python程序.md)
