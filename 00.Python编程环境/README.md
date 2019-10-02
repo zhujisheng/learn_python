@@ -6,3 +6,5 @@
 - [最基础的IDE——IDLE](3.最基础的IDE——IDLE.md) （难度：★★☆☆☆）
 - [浏览器中的Python——Jupyter](4.浏览器中的Python——Jupyter.md) （难度：★★☆☆☆）
 - [单片机上的Python——MicroPython](5.单片机上的Python——MicroPython.md) （难度：★★★☆☆）
+
+**本讲义对应视频课程[《Python应用实战》](https://study.163.com/course/courseMain.htm?courseId=1209533804&share=2&shareId=400000000624093)**

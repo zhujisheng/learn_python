@@ -7,3 +7,5 @@
 - [拼音与Slugify](3.拼音与Slugify.md) （难度：★☆☆☆☆）
 - [字符串操作与正则表达式](4.字符串操作与正则表达式.md) （难度：★★★★☆）
 - [fuzzywuzzy——模糊匹配](5.fuzzywuzzy——模糊匹配.md) （难度：★☆☆☆☆）
+
+**本讲义对应视频课程[《Python应用实战》](https://study.163.com/course/courseMain.htm?courseId=1209533804&share=2&shareId=400000000624093)**
