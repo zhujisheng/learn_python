@@ -9,7 +9,8 @@
 - [比特币的发行](5.比特币的发行.md) （难度：★★☆☆☆）
 - [区块链结构分析](6.区块链结构分析.md) （难度：★★★★☆）
 - [Bitcoin Core](7.BitcoinCore.md) （难度：★★★☆☆）
-- [Bitcoin Core's RPCs](8.BitcoinCoresRPCs.md) （难度：★★★★☆）
+- [Bitcoin Core's RPCs](8.BitcoinCoresRPCs.md) （难度：★★★☆☆）
+- [名词解释](9.名词解释.md) （难度：★★★★★）
 
 
 
