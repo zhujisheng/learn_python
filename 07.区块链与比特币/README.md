@@ -10,7 +10,7 @@
 - [区块链结构分析](6.区块链结构分析.md) （难度：★★★★☆）
 - [Bitcoin Core](7.BitcoinCore.md) （难度：★★★☆☆）
 - [Bitcoin Core's RPCs](8.BitcoinCoresRPCs.md) （难度：★★★☆☆）
-- [名词解释](9.名词解释.md) （难度：★★★★★）
+- [Script、CoinBase、分叉及其它](9.Script、CoinBase、分叉及其它.md) （难度：★★★★★）
 
 
 
