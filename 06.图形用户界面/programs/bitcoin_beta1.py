@@ -2,27 +2,40 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from bit.network import NetworkAPI
+import threading
 
 class MyWinClass(QMainWindow):
+
+    # 一个自定义的信号
+    sig_unspents_arrived = pyqtSignal(object)
 
     def __init__(self):
         super().__init__()
         win = uic.loadUi("bitcoin_alpha.ui", self)
         win.show()
         self.pushButton.clicked.connect(self.get_account)
+        self.sig_unspents_arrived.connect(self.handle_unspents_arrived)
 
     def get_account(self):
-        # 查询时界面设置
-        self.label_2.setText( '查询中......' )
-        self.pushButton.setEnabled(False)
+        # 查询中界面设置
         self.treeWidget.setHidden(True)
+        self.pushButton.setEnabled(False)
+        self.label_2.setText( '查询中......' )
 
-        # 网络查询余额
+        # 启动新的线程进行查询
         addr = self.lineEdit.text()
-        unspents = NetworkAPI.get_unspent(addr)
+        t=threading.Thread(target=self.get_utxo,args=(addr,))
+        t.start()
 
-        # 查询后界面展现
+    def get_utxo(self, addr):
+        """查询，当返回时发射信号sig_unspents_arrived"""
+        unspents = NetworkAPI.get_unspent(addr)
+        self.sig_unspents_arrived.emit(unspents)
+
+    def handle_unspents_arrived(self, unspents):
+        """根据查询结果调整界面显示"""
         self.pushButton.setEnabled(True)
+
         if len(unspents)==0:
             self.label_2.setText( '<html><head/><body><p><span style=" color:#00aa00;">0</span></p></body></html>' )
         else:
