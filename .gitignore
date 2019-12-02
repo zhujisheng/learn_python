@@ -5,6 +5,6 @@
 *.mp3
 *.mp4
 temp/
+tmp/
 video/
 __pycache__/
-
