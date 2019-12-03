@@ -4,7 +4,9 @@
 *.pptx
 *.mp3
 *.mp4
+*.bak
 temp/
 tmp/
 video/
 __pycache__/
+.ipynb_checkpoints/
