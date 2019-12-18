@@ -7,5 +7,8 @@
 - [numpy数组运算](3.numpy数组运算.ipynb) （难度：★★★★☆）
 - [matplotlib作图](4.matplotlib作图.ipynb) （难度：★★☆☆☆）
 - [Pandas数据处理](5.Pandas数据处理.ipynb) （难度：★★★☆☆）
+- [Seaborn作图(1)](6.Seaborn作图(1).ipynb) （难度：★★★★☆）
+- [Seaborn作图(2)](7.Seaborn作图(2).ipynb) （难度：★★★★★）
+
 
 **本讲义对应视频课程[《Python应用实战》](https://study.163.com/course/courseMain.htm?courseId=1209533804&share=2&shareId=400000000624093)**
