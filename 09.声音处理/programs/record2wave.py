@@ -1,7 +1,7 @@
 import pyaudio
 import wave
 
-WAVE_FILE = 'my_audio.wav'
+WAVE_FILE = 'audio/my_audio.wav'
 CHANNELS = 2
 SAMPLE_RATE = 16000
 SAMPLE_WIDTH = 2

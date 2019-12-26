@@ -1,7 +1,7 @@
 import pyaudio
 import wave
 
-WAVE_FILE = 'example0.wav'
+WAVE_FILE = 'audio/example0.wav'
 
 p = pyaudio.PyAudio()
 
