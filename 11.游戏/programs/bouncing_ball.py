@@ -1,6 +1,7 @@
 import pygame
 import random
 import math
+import sys
 
 # 定义窗口属性
 W_NAME = "Bouncing Ball Game"
@@ -70,6 +71,7 @@ def show_go_screen():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
+                sys.exit()
             if event.type == pygame.KEYUP:
                 waiting = False
 
