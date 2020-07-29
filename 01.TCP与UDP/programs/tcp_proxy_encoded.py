@@ -28,7 +28,13 @@ def proxy_process_encoded( sock1, sock2 ):
     while True:
         events = sel.select()
         for (key,ev) in events:
-            data_in = key.fileobj.recv(8192)
+            try:
+                data_in = key.fileobj.recv(8192)
+            except ConnectionResetError as e:
+                print(key.fileobj, "\nreset receive!")
+                sock1.close()
+                sock2.close()
+                return
             if data_in:
                 if key.fileobj==sock1:
                     sock2.send(xor_encode(data_in))
